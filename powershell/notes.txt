@@ -1,0 +1,10 @@
+*PowerShell introduces new type of commnad(cmdlets) share a common vern-noun syntax and offer many usuability improvements over standar commands.
+
+*PowerShell understands objects and is immensely easier than working in the plain-text world of traditional shells.
+
+*PowerShell supports discovery(using three simple commands)
+
+*PowerShell enables ubiquitous scripting and bridges many technologies as .NET,XML and Active Directory, makes working with these previously isolate technologies easier than ever before.
+
+*PowerShell management of data stores through its provider moder, lets you manage data stores using the same techniques(manage files and folders)
+
