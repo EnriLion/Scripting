@@ -1,0 +1,100 @@
+-Local Version Control Systems-
+
+Many people version-control method of choice is to copy files into another directory.. to deal whith the issue of forget in which directory you are in and accidentally write the wrong file or copy over files the programmers developed VCSs that had a simple database that kept all the changes to files under revision control.
+
+Local Computer
+
+Checkout	Version Database
+
+[File] ----------[Version 3]
+		    |
+ 	            |
+		 [Version 2]
+		    |
+ 	            |
+		 [Version 1]
+
+One of the most popular VCS tool was a system called RCS(Revision Control System)(can recreate or format a disk and adding patches)
+
+-Centralized Version Control Systems(CVCSs)-
+
+These systems(CVS and perforce) have a single server that contains all the versioned files and a number of clients check out files from that central place and formany years this has been the standar for vesion control.
+
+	[shared repository]
+	/    \		  \
+      /        \             \
+[developer]   |             [developer]
+	      |
+	  [developer]
+
+This setup also has some serious flaws(is the single point of failure that the crentralized server presents).
+Local VCSs suffer from this same problem, whenver you have the entire history of the project in a single of the project in a single place risking everything.
+
+	
+-Distributed Version Control Systems-
+
+In a DVC(Git, Mercurial,etc) clients don't check out the latest snapshot, they fully mirror the repository including the fullh history and if the sever dies the files can be copied and back up to the server and restore it.
+
+			[[Server computer]](1)
+			[Version Database]
+				|
+			   Version 3
+				|
+			   Version 2
+				|
+			[   Version 1     ]
+                       /                    \
+                    /                         \
+                /                               \
+           (2) ------------------------------------(3)
+
+Thanks for this systems we could handling several repository and collaborate togeter with different groups of people simultaneously.
+
+
+-A Short History of Git-
+
+Linus and their team developed community their own tool based of the lessons using BitKeeper:
+
+*Speed
+*Simple design
+*Strong suppor for non-linera development(thousands of parallel branches)
+*Fully distributed
+*Able to handle large projects like the Linux kernel efficienlty(speed and data size)
+
+
+
+-Git has integrity-
+
+The mechanism that Git uses is this checksumming called SHA-1 has( a 40-character string composed of hexadecimal characters(0-9 and a-f) and calculated based on contens of a file or direcotyr structure in Git.
+
+
+-The Three States-
+
+Git has three main states that your files cna reside in(modified, staged and committed)
+
+*Modified mean that you have changed the file but have not commited it to your database yet
+
+*Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+
+*Committed means that the data is safely stored in your local database
+
+working directory  staging area          .git directory(repository)
+     |                |                               |
+     |   <-   Checkout the project--------------------|
+     |                |				      |
+     |                |                               |
+stage fixes ->        |                               |
+		      commit -----------------------> |
+                      |
+
+Basic workflow:
+
+1) You modify files in your working tree
+
+2) You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+
+3) You do a commit, which takes the files as they are in the staging area ans stores that snapshot permanently to your Git directory.
+
+Installing in windows: Using chocolatey?
+
+
