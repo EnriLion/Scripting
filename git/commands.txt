@@ -1,0 +1,74 @@
+##git config
+
+You can view all of your settings and where they are comin from using:
+
+$ git config --list --show-origin
+
+#Your Identity
+
+The first thing when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it's immutably baked into the commits you start creating:
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email "johnodoe@example.com"
+$ git config --global user.email  johnodoe@example.com
+
+You can use without--global option when you're in that project.( to know many commands of global option in that project"
+
+
+#Your Editor 
+
+The next is configure the default text editor that will be used when Git need you to tipe in a message:
+
+Set up the text editor(Emacs)
+
+$ git config --global core.editor emacs
+
+Set up the text editor(Windows/Notepad++)
+
+$ git config --global core.editor "'C:/Program Files/Notepad ++/notepad++/exe' -multiInst -notabbar -nosession -noPlugin" 
+
+
+#Your default branch name
+
+When you create a new repository with git init:
+
+$ git config --global init.defaultBranch main
+
+
+#Checking your settings
+
+If you want to check your configuration settings, you can use the git config --list command to list all the settings Git can find at that point:
+
+$ git config --list
+
+Because Git reads the same key from different files ([path]/etc/gitconfig) and ~/.gitconfig
+
+You can also check what Git thinks a specific keys value by typing git config <key>:
+
+to check what Git thinks a specific key value by typing:
+
+$ git config  user.name
+John Doe
+
+#you can query Git as to tht origin for that value and it will tell you which configuration file had final:
+
+$ git config  --show-origin in rerere.autoUpdate
+file:/home/johndoe/.gitconfig false
+
+#Getting Help
+
+$ git help <verb>
+$ git help --help
+$ man git-<verb>
+
+You can get the manpage help for the git config command by running this:
+
+$ git help config
+
+In addition if you don't need the full-blown manpage help, but just need a quick refresher on the available options for a Git command, you can ask for the more concise "help" output with the -h option as in:
+
+
+$ git add -h
+
+--Git Basics--
+

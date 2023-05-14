@@ -97,4 +97,18 @@ Basic workflow:
 
 Installing in windows: Using chocolatey?
 
+-First-Time Git Setup-
+
+git config lets you get and set configuration variables that control all aspects of how git looks and operates:
+
+    1)[path]/etc/gitconfig = Contains values applied to every user on the system and all their repositories if you pass the option --system  to git config(reads and writes from this file)
+
+    2)~/.gitconfig / ~/.config/git/config = you can make git read and write to this file passing the --global option and this affects all of the repositories you work with on your system.
+
+    3)config file in teh Git directory(.git/config)
+
+Each level overrides values in the previous level, so values in .git/config trump those in [path]/etc/gitconfig
+
+
+
 
