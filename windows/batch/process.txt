@@ -1,0 +1,61 @@
+
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+System Idle Process              0 Services                   0          8 K
+System                           4 Services                   0        144 K
+Registry                        72 Services                   0     67,296 K
+smss.exe                       256 Services                   0        920 K
+csrss.exe                      356 Services                   0      4,520 K
+wininit.exe                    424 Services                   0      6,348 K
+csrss.exe                      432 Console                    1      4,840 K
+winlogon.exe                   492 Console                    1     11,360 K
+services.exe                   516 Services                   0      7,132 K
+lsass.exe                      524 Services                   0     32,252 K
+fontdrvhost.exe                644 Console                    1      7,812 K
+fontdrvhost.exe                652 Services                   0      3,480 K
+svchost.exe                    660 Services                   0     48,804 K
+svchost.exe                    748 Services                   0     23,116 K
+dwm.exe                        852 Console                    1     48,844 K
+svchost.exe                    920 Services                   0     25,728 K
+svchost.exe                    928 Services                   0    108,924 K
+svchost.exe                    968 Services                   0    105,132 K
+svchost.exe                    976 Services                   0     36,420 K
+svchost.exe                    760 Services                   0     58,784 K
+Memory Compression            1088 Services                   0     10,636 K
+svchost.exe                   1200 Services                   0     17,732 K
+svchost.exe                   1224 Services                   0     36,608 K
+svchost.exe                   1336 Services                   0     26,008 K
+svchost.exe                   1448 Services                   0     14,528 K
+svchost.exe                   1456 Services                   0     19,616 K
+svchost.exe                   1480 Services                   0     27,480 K
+svchost.exe                   1584 Services                   0     28,816 K
+dasHost.exe                   1948 Services                   0      7,840 K
+sihost.exe                    1656 Console                    1     23,104 K
+svchost.exe                    956 Console                    1     67,272 K
+taskhostw.exe                 1120 Console                    1      7,048 K
+ctfmon.exe                    2120 Console                    1     19,420 K
+explorer.exe                  2284 Console                    1    225,900 K
+svchost.exe                   2584 Console                    1     43,832 K
+StartMenuExperienceHost.e     2748 Console                    1     57,716 K
+RuntimeBroker.exe             2828 Console                    1     20,964 K
+SearchApp.exe                 3064 Console                    1     75,916 K
+RuntimeBroker.exe             2372 Console                    1     23,616 K
+dllhost.exe                   3152 Console                    1     29,584 K
+RuntimeBroker.exe             3448 Console                    1     11,528 K
+svchost.exe                   3524 Services                   0      7,124 K
+TextInputHost.exe             3928 Console                    1     36,428 K
+dllhost.exe                   4032 Console                    1     28,360 K
+svchost.exe                   3472 Services                   0     22,992 K
+SgrmBroker.exe                2804 Services                   0      6,312 K
+svchost.exe                   2972 Services                   0     16,884 K
+WmiPrvSE.exe                  1156 Services                   0     15,152 K
+BraveUpdate.exe               1464 Services                   0      3,720 K
+BraveUpdate.exe               1148 Services                   0      1,104 K
+BraveCrashHandler.exe          840 Services                   0        972 K
+BraveCrashHandler64.exe       2964 Services                   0        776 K
+BraveUpdate.exe               2448 Services                   0     18,328 K
+WmiPrvSE.exe                  2228 Services                   0     10,560 K
+notepad.exe                   3696 Console                    1     16,912 K
+cmd.exe                       1076 Console                    1      7,624 K
+conhost.exe                   1676 Console                    1     17,940 K
+tasklist.exe                  3424 Console                    1      9,168 K
