@@ -24,6 +24,22 @@ menu(){
 	echo "	"
 }
 
+##FunctionUpdate
+funcupde(){
+	clear
+	echo -e "${cgreen} Function update${creset}"
+	sleep 1
+	clear
+	sudo apt update
+}
+##FunctionRemove
+funcrmv(){
+	clear
+	echo -e "${cred} Function remove${creset}"
+	sleep 1
+	clear
+	sudo apt update
+}
 ##Options
 options(){
 	if [ $op == "?" ] || [ $op == "[?]" ] || [ $op == "Instructions" ];then
@@ -39,10 +55,10 @@ options(){
 	else
 		case $op in 
 			"a" | "[a]" | "Update")
-				echo ""
+				funcupde
 				;;
 			"b" | "[b]" | "Remove")
-				echo ""
+				funcrmv
 				;;
 			*)
 				clear
