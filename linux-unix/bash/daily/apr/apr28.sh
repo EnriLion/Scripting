@@ -2,8 +2,7 @@
 ##COLOR ANSI
 
 ##GLOBAL VARIABLES
-nos=$(name -o)
-
+nos=$(uname -o)
 ##BANNER
 function banner(){
 	echo "	MyLazyVim"
