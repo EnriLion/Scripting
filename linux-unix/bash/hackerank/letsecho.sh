@@ -12,6 +12,5 @@
 # HELLO
 # Explanation
 # -
-# echo HELLO
+echo HELLO
 # printf HELLO
-printenv Hello
