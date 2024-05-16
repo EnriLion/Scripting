@@ -60,6 +60,7 @@ function option(){
 			sleep 1
 			clear
 			exit 0
+			;;
 	esac
 }
 
