@@ -43,6 +43,7 @@ function function_knowop(){
 					func_bothdeb $a $b
 					;;
 				"d" | "[d]" | "D" | "[D]" | "exit" | "Exit" | "EXIT" )
+					b=("vim")
 					clear
 					echo "Bye..."
 					sleep 1
@@ -94,6 +95,7 @@ function func_install(){
 				sudo apt install $a
 				sudo apt install $b
 			elif [[ -n "$1" ]];then
+				echo $a
 				sudo apt update
 				sudo apt upgrade -y
 				sudo apt install $a
@@ -102,21 +104,22 @@ function func_install(){
 		"Android")
 			if [[ -n "$1" && -n "$2" ]];then
 				pkg update 
-				apt update
-				apt install $a ; pkg install $a ; apt install $b ; pkg install $b
-				##The commmand to run termux to a storage
+				pkg upgrade
+				apt update 
+				apt upgrade
+				##Setting up termux-storage
 				termux-setup-storage
 			elif [[ -n "$1" ]];then
 				pkg update 
-				apt update
-				apt install $a ; pkg install $a
-				##The commmand to run termux to a storage
+				pkg upgrade
+				apt update 
+				apt upgrade
+				##Setting up termux-storage
 				termux-setup-storage
-				if [[ "$1" -eq "vim" ]];then
-
-				fi
+			fi
 			;;
 		*)
+			echo ""
 			;;
 	esac
 }
