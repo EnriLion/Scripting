@@ -88,20 +88,34 @@ function function_knowop(){
 }
 
 #FUNCTION INSTALL SOFTWARE
+
+
 function func_install(){
 	case $know_os in
 		"GNU/Linux")
-			if [[ -n "$1" && -n "$2" ]];then
-				sudo apt update
-				sudo apt upgrade -y
+			if [ "$a" == "vim" ];then
+				sudo apt install $a
+			elif [[ "$a" == "vim"  && "$b" == "code" ]];then
 				sudo apt install $a
 				sudo apt install $b
-			elif [[ -n "$1" ]];then
-				sudo apt update
-				sudo apt upgrade -y
-				sudo apt install $a
+			else 
+				sleep 1
+				echo "You are wrong..."
+				sleep 1
+				clear
+				main
 			fi
 			;;
+				# if [[ -n "$1" && -n "$2" ]];then
+				# 	sudo apt update
+				# 	sudo apt upgrade -y
+				# 	sudo apt install $a
+				# 	sudo apt install $b
+				# elif [[ -n "$1" ]];then
+				# 	sudo apt update
+				# 	sudo apt upgrade -y
+				# 	sudo apt install $a
+				# fi
 		"Android")
 			if [[ -n "$1" && -n "$2" ]];then
 				pkg update 
