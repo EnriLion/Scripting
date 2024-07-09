@@ -93,11 +93,18 @@ function function_knowop(){
 function func_install(){
 	case $know_os in
 		"GNU/Linux")
-			if [ "$a" == "vim" ];then
-				sudo apt install $a
-			elif [[ "$a" == "vim"  && "$b" == "code" ]];then
-				sudo apt install $a
-				sudo apt install $b
+			if [ "$a" = "nvim" ];then
+				sudo apt upgrade
+				sudo apt update
+				sudo apt install neovim
+			elif [[ "$a" == "nvim"  && "$b" == "code" ]];then
+				#SETTING UP NEOVIM
+				sudo apt upgrade
+				sudo apt update
+				sudo apt install neovim
+				#SETTING UP VSCODE
+
+
 			else 
 				sleep 1
 				echo "You are wrong..."
@@ -145,7 +152,7 @@ function func_bothdeb(){
 		a=("Neovim")
 		b=("VsCode")
 	fi
-	echo "	Are you going to install $a and $b"
+	echo "	Are you going to install - $a - $b "
 	echo "	Y/y[Yes] or N/n[Not] to proceed"
 	printf "Option: "
 	read ans
@@ -155,11 +162,6 @@ function func_bothdeb(){
 			b=("code")
 			echo "Installing...neovim"
 			func_install $a $b
-			sleep 1
-			clear
-			echo "See you..."
-			sleep 1
-			exit 0
 			;;
 		"n" | "N" | "Not" | "NOT" | "not")
 			clear
