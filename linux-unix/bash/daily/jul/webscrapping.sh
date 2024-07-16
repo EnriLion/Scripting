@@ -14,7 +14,13 @@ link_array=($(curl -s "$url" | awk -F 'href="' '/<a/{gsub(/".*/, "", $2); print 
 
 for link in "${link_array[@]}"; do
 	full_link="${base_url}${link}"
-	title=$(curl -s "$full_link" | grep -o '<title[^>]*>[^<]*</title>' | sed -e 's/<title>//g' -e 's/<\/title>//g') echo "\"$full_link\",\"$title\"" >> cnn_links.csv
+	# real_t=$(curl -s "$full_link" | grep -o '<title[^>]*>[^<]*</title>')
+	title=$(curl -s "$full_link" | grep -o '<title[^>]*>[^<]*</title>' | sed -e 's/<title>//g' -e 's/<\/title>//g')	
+	echo  " " >> cnn_links.csv
+	echo $title >> cnn_links.csv
+	echo  " " >> cnn_links.csv
+	# echo "\"$full_link\",\"$title\"" >> cnn_links.csv
+	echo "\"$full_link\"" >> cnn_links.csv
 done
 
 echo "Scraping and CSV creation complete. Links and titles saved to 'cnn_links.csv'."
