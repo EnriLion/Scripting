@@ -92,15 +92,22 @@ function func_install(){
 	case $know_os in
 		"GNU/Linux")
 			if [ "$a" = "nvim" ];then
+				#SETTING UP NEOVIM
 				sudo apt upgrade
 				sudo apt update
 				sudo apt install neovim
+			elif [ "$a" = "code" ];then
+				#SETTING UP VSCODE
+				curl -o code.deb https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+				sudo dpkg -i code.deb
 			elif [[ "$a" == "nvim"  && "$b" == "code" ]];then
 				#SETTING UP NEOVIM
 				sudo apt upgrade
 				sudo apt update
 				sudo apt install neovim
 				#SETTING UP VSCODE
+				curl -o code.deb https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+				sudo dpkg -i code.deb
 			else 
 				sleep 1
 				echo "You are wrong..."
@@ -109,16 +116,6 @@ function func_install(){
 				main
 			fi
 			;;
-				# if [[ -n "$1" && -n "$2" ]];then
-				# 	sudo apt update
-				# 	sudo apt upgrade -y
-				# 	sudo apt install $a
-				# 	sudo apt install $b
-				# elif [[ -n "$1" ]];then
-				# 	sudo apt update
-				# 	sudo apt upgrade -y
-				# 	sudo apt install $a
-				# fi
 		"Android")
 			if [[ -n "$1" && -n "$2" ]];then
 				pkg update 
@@ -136,7 +133,7 @@ function func_install(){
 			;;
 		*)
 			clear
-			echo "Hello"
+			echo "We are in process to make this script available for any operatin-system or distribution"
 			;;
 	esac
 }
