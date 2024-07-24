@@ -195,9 +195,21 @@ function func_install(){
 			if [ "$a" = "vim" ];then
 				a=("vim")
 				set_init_and $a
+				##Termux config
+				termux-setup-storage
+				cd storage 
+				mkdir projects
+				cd $HOME
+				ln -s ~/storage/projects
 			elif [ "$a" = "nvim" ];then
 				a=("neovim")
 				set_init_and $a
+				##Termux setup storage github
+				termux-setup-storage
+				cd storage 
+				mkdir projects
+				cd $HOME
+				ln -s ~/storage/projects
 			else
 				clear
 				echo "You are wrong..."
