@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # FUNCTIONS
-func_port=$(5555)
-func_ip=$()
+func_port=$(adb devices  | grep 5555 | awk '{print $1}' | cut -d ":" -f1)
+func_ip=$(adb devices  | grep 5555 | awk '{print $1}' | cut -d ":" -f2)
 
 function banner() {
 echo "      ---------"
