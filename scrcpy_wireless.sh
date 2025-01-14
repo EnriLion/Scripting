@@ -53,9 +53,14 @@ function execute(){
 	installer_nmap
 	if command -v adb > /dev/null 2>&1; then
 		if command -v scrcpy > /dev/null 2>&1;then
-			sleep 1
-			clear
-			echo "Your device is already in the port 5555"
+			#Verify if there are running in port 5555
+			$fun_ip
+			$fun_port
+			if [ -z "$func_ip"] && [ -v "$func_port"];then
+				echo " "
+			else 
+				echo "The port is in use"
+			fi
 		else
 			sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
 				gcc git pkg-config meson ninja-build libsdl2-dev \
