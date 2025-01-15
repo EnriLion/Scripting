@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # FUNCTIONS
-func_port=$(adb devices  | grep 5555 | awk '{print $1}' | cut -d ":" -f1)
-func_ip=$(adb devices  | grep 5555 | awk '{print $1}' | cut -d ":" -f2)
+func_ip=$(adb devices  | grep 5555 | awk '{print $1}' | cut -d ":" -f1)
+func_port=$(adb devices  | grep 5555 | awk '{print $1}' | cut -d ":" -f2)
 
 function banner() {
 echo "      ---------"
@@ -56,10 +56,16 @@ function execute(){
 			#Verify if there are running in port 5555
 			$fun_ip
 			$fun_port
-			if [ -z "$func_ip"] && [ -v "$func_port"];then
-				echo " "
+			# if [ "$func_ip" =~^[[:space:]]*$ ] && [ "$func_port"  =~ ^[[:space:]]*$ ];then
+			if [[ "$func_ip" =~ ^[[:space:]]*$ ]] && [[ "$func_port" =~ ^[[:space:]]*$ ]]  then
+				sleep 1
+				clear
+				main
 			else 
-				echo "The port is in use"
+				sleep 1
+				clear
+				echo "The port: $func_port is in use"
+				echo "The device is: $func_ip"
 			fi
 		else
 			sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
