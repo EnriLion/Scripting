@@ -66,6 +66,7 @@ function execute(){
 				clear
 				echo "The port: $func_port is in use"
 				echo "The device is: $func_ip"
+				echo "Are you sure you want to connect with this device($func_ip)? Y[Yes]/N[No]"
 			fi
 		else
 			sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
