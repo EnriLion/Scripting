@@ -46,6 +46,33 @@ function installer_nmap(){
 	fi
 }
 
+function run_service(){
+	echo "Are you sure you want to run this service Y/yes or N/not?"
+	read $service
+	sleep 1
+	clear
+	case $service in
+		"Yes" |  "y" | "YES" | "yes" | "Y")
+
+		;;
+		"No" |  "n" | "NO" | "no" | "N")
+			clear 
+			sleep 1
+			main
+		;;
+		*)
+			clear 
+			sleep 1
+			main
+		;;
+	esac
+}
+
+function check_ip() {
+	nmap 
+}
+
+
 function execute(){
 	sudo apt update;
 	sudo apt upgrade;
@@ -60,7 +87,9 @@ function execute(){
 			if [[ "$func_ip" =~ ^[[:space:]]*$ ]] && [[ "$func_port" =~ ^[[:space:]]*$ ]]  then
 				sleep 1
 				clear
-				main
+				echo "The port 5555 is not in use"
+				run_service
+
 			else 
 				sleep 1
 				clear
